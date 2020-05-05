@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Project requires the last version of D3 like 5.15.1, which is used in its minified version
+Project requires the last version of D3 like 5.16.0, which is used in its minified version
 
 ### Design Specification
 Create a json file with multivariate data: there are 10 data-points and each data-point has five quantitative variables whose values are all positive. Draw this dataset by means of a "parallel coordinates" diagram (consult the slides on the visualization of multivariate data) in which the first variable is used for the first axis, the second variable is used for the second axis and so on. By clicking with the left mouse button on the area between two axes they exchange places Make sure that the transformations are continuous and not jumps.
