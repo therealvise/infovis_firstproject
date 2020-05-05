@@ -1,0 +1,82 @@
+[
+  {
+      "Name":"Spain",
+      "Infected":248301,
+      "Currently Positive": 71240,
+      "Dead":25248,
+      "Healed":151633,
+      "Death Rate Percentage":10.24
+  },
+  {
+      "Name":"Italy",
+      "Infected":211938,
+      "Currently Positive": 99980,
+      "Dead":29079,
+      "Healed":82879,
+      "Death Rate Percentage":13.72
+  },
+  {
+      "Name":"United Kingdom",
+      "Infected":190609,
+      "Currently Positive": 161529,
+      "Dead":28735,
+      "Healed":345,
+      "Death Rate Percentage":15.08
+  },
+  {
+      "Name":"France",
+      "Infected":169583,
+      "Currently Positive": 92093,
+      "Dead":25204,
+      "Healed":51476,
+      "Death Rate Percentage":14.86
+  },
+  {
+      "Name":"Germany",
+      "Infected":166152,
+      "Currently Positive": 26459,
+      "Dead":6993,
+      "Healed":132700,
+      "Death Rate Percentage":4.21
+  },
+  {
+      "Name":"Belgium",
+      "Infected":50267,
+      "Currently Positive": 29965,
+      "Dead":7924,
+      "Healed":12378,
+      "Death Rate Percentage":15.76
+  },
+  {
+      "Name":"Netherlands",
+      "Infected":40968,
+      "Currently Positive": 35548,
+      "Dead":5098,
+      "Healed":322,
+      "Death Rate Percentage":12.44
+  },
+  {
+      "Name":"Georgia",
+      "Infected":30044,
+      "Currently Positive": 28566,
+      "Dead":1255,
+      "Healed":223,
+      "Death Rate Percentage":4.18
+  },
+  {
+      "Name":"Switzerland",
+      "Infected":29981,
+      "Currently Positive": 2997,
+      "Dead":1784,
+      "Healed":25200,
+      "Death Rate Percentage":5.95
+  },
+  {
+      "Name":"Portugal",
+      "Infected":25524,
+      "Currently Positive": 22749,
+      "Dead":1063,
+      "Healed":1712,
+      "Death Rate Percentage":4.16
+  }
+]
