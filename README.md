@@ -1,6 +1,6 @@
 # infovis_firstproject
 
-This repo contains the first project for Information Visualization, a course held at the "Roma Tre University" by Prof. Maurizio Patrignanii.
+This repo contains the first project for Information Visualization, a course held at the "Roma Tre University" by Prof. Maurizio Patrignani.
 
 ## Getting Started
 
