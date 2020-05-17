@@ -1,0 +1,68 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Parallel Coordinates</title>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <legend for="mioGrafico"></legend>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <!-- A bit of style -->
+  <style>
+  
+  .axis {
+    opacity: 0.4;
+  }
+
+  .axis:hover {
+    opacity: 1;
+  }
+
+  svg {
+    font: 10px sans-serif;
+  }
+
+  .background path {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+  }
+
+  .foreground path {
+    fill: none;
+    stroke: #34008B;
+    opacity:0.1;
+  }
+
+  .brush .extent {
+    fill-opacity: .3;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+  }
+
+  .axis line,
+  .axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .axis text {
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+    cursor: move;
+  }
+  </style>
+</head>
+<body>
+<!-- Load my script-->
+<h1>Stats about Covid-19 updated to 5 May </h1>
+<div id="mioGrafico" class="div1"></div>
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
