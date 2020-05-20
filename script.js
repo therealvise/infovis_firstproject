@@ -31,9 +31,7 @@
  
   // Extract the list of dimensions we want to keep in the plot. Here I keep all except the column called Countries
   x.domain(dimensions = d3.keys(data[0]).filter(function(d) {
-    if (d == "Name") {
-      return;
-    }
+   
     if (d == "Infected") {
       // invert axis
       return (y[d] = d3.scaleLinear()
@@ -71,45 +69,15 @@
 
     // Add color foreground lines for focus.
   foreground = svg.append("g")
-  .attr("class", lines )
-  .selectAll("myPath")
+  .attr("class", "foreground" )
+  .selectAll("path")
   .data(data)
   .enter().append("path")
   .attr("d", path)
-  .style("fill", "none")
   .style("stroke", function(d){ return( color(d.Name))} )
-  .on("mouseover", highlight)
-  .on("mouseout", doNotHighlight)
+  
 
-  var lines = function(d) {
-    return "line" + d.Name;
-  }
-
-    // Highlight the specie that is hovered
     
-    var highlight = function(d){
-    selected_country = d.Name
-
-     //first every group turns grey
-      d3.selectAll(".line")
-     .transition().duration(200)
-      .style("stroke", "lightgrey")
-      .style("opacity", "0.2")
-    // Second the hovered specie takes its color
-    d3.selectAll("." + selected_country)
-     .transition().duration(200)
-      .style("stroke", color(selected_country))
-      .style("opacity", "1")
-  }
-
-    // Unhighlight
-    var doNotHighlight = function(d){
-    d3.selectAll(".line")
-      .transition().duration(500).delay(1000)
-      .style("stroke", function(d){ return( color(d.Name))} )
-      .style("opacity", "1")
-  }
-
   countries = ["Spain", "Italy", "United Kingdom", "France", "Germany", "Belgium", "Netherlands", "Georgia", "Switzerland", "Portugal" ]
   
   
