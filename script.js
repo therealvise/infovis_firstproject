@@ -93,7 +93,7 @@
 
   
 
-  countries = ["Spain", "Italy", "United Kingdom", "France", "Germany", "Belgium", "Netherlands", "Georgia", "Switzerland", "Portugal" ]
+  countries = [ "Spain", "Italy", "United Kingdom", "France", "Germany", "Belgium", "Netherlands", "Georgia", "Switzerland", "Portugal" ]
   
   
     // Add one dot in the legend for each name.
