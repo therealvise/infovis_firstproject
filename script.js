@@ -28,10 +28,13 @@
   // Parse the Data
 
   d3.json("./dataset.json", function(data) {
+    
  
   // Extract the list of dimensions we want to keep in the plot. Here I keep all except the column called Countries
   x.domain(dimensions = d3.keys(data[0]).filter(function(d) {
-   
+    if (d == "Name") {
+      return;
+    }
     if (d == "Infected") {
       // invert axis
       return (y[d] = d3.scaleLinear()
@@ -66,18 +69,30 @@
     .padding(1)
     .domain(dimensions);
 
+     
+    background = svg.append("g")
+    .attr("class", "background")
+    .selectAll("path")
+    .data(data)
+    .enter().append("svg:path")
+    .attr("d", path);
 
     // Add color foreground lines for focus.
   foreground = svg.append("g")
-  .attr("class", "foreground" )
-  .selectAll("path")
+  .attr("class", lines )
+  .selectAll("myPath")
   .data(data)
   .enter().append("path")
   .attr("d", path)
+  .style("fill", "none")
   .style("stroke", function(d){ return( color(d.Name))} )
   
+  var lines = function(d) {
+    return "line" + d.Name;
+  }
 
-    
+  
+
   countries = ["Spain", "Italy", "United Kingdom", "France", "Germany", "Belgium", "Netherlands", "Georgia", "Switzerland", "Portugal" ]
   
   
@@ -135,8 +150,7 @@
      delete dragging[d];
      transition(d3.select(this)).attr("transform", "translate(" + x(d) + ")");
      transition(foreground).attr("d", path);
-     background
-     .attr("d", path)
+     background.attr("d", path)
      .transition()
      .delay(500)
      .duration(0)
